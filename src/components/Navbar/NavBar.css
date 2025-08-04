@@ -1,0 +1,14 @@
+.NavBar{
+    height: 100px;
+    width: 100vw;
+    background-color: rgb(49, 155, 231);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.btn_Nav{
+    cursor: pointer;
+    border-radius: 12px;
+    width: 10vw;
+    height: 30px;
+}

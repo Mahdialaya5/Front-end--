@@ -1,0 +1,15 @@
+.cards{
+    margin: 10px auto;
+    display:flex;
+    justify-content: space-evenly;
+
+}
+.card{
+    background-color: aliceblue;
+    border-radius: 12px;
+    border: 2px;
+    border-color: blue;
+    height: 200px;
+    width: 25vw;
+    padding: 5px;
+}
