@@ -4,3 +4,6 @@ button{
   border: none;
   cursor: pointer;
 }
+.err{
+  color: red;
+}
