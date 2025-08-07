@@ -19,7 +19,7 @@ function App() {
    if (token) {
     GetCurrentUser(dispatch)
    } 
-  }, [token])
+  }, [token,dispatch])
   
   return (
     <Routes>

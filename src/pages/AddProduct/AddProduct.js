@@ -8,13 +8,20 @@ function AddProduct() {
     const [data, setdata] = useState({
          Name:'',
          Price:'',
-         Qunatity:''
+         Qunatity:'',
+         Image:null
     })
     const navigate=useNavigate()
     const dispatch=useDispatch()
         const HandleSubmit=(e)=>{
         e.preventDefault()
-        addproduct(data,navigate,dispatch)
+        const DataForm= new FormData()
+        DataForm.append("Name",data.Name)
+        DataForm.append("Price",data.Price)
+        DataForm.append("Quantity",data.Qunatity)
+        DataForm.append('file',data.Image)
+        
+        addproduct(DataForm,navigate,dispatch)
     }
   return (
     <div>
@@ -24,7 +31,7 @@ function AddProduct() {
             <input placeholder='Name' onChange={(e)=>setdata({...data,Name:e.target.value})}/>
             <input placeholder='Price' onChange={(e)=>setdata({...data,Price:e.target.value})} />
             <input placeholder='Quantity'  onChange={(e)=>setdata({...data,Qunatity:e.target.value})}/>
-            <input type='file' />
+            <input type='file'   onChange={(e)=>setdata({...data,Image:e.target.files[0]})}/>
             <button>Save</button>
         </form>
     </div>
